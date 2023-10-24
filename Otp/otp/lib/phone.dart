@@ -26,7 +26,7 @@ class _MyphoneState extends State<Myphone> {
               SizedBox(
                 height: 30,
               ),
-              Image.asset('assets/Kishan.jpg',width: 250,height: 200,),
+              Image.asset('assets/Kishann.jpg',width: 250,height: 200,),
               Text('REGISTER',style: TextStyle(
                 fontSize: 30,fontWeight: FontWeight.bold,color: Colors.green.shade800),
               ),SizedBox(
