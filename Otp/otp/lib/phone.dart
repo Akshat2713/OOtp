@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:otp/otp.dart';
 
 class Myphone extends StatefulWidget {
   const Myphone({super.key});
@@ -14,6 +15,7 @@ class _MyphoneState extends State<Myphone> {
     countrycode.text="+91";
     super.initState();
   }
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -27,6 +29,9 @@ class _MyphoneState extends State<Myphone> {
                 height: 30,
               ),
               Image.asset('assets/Kishann.jpg',width: 250,height: 200,),
+              SizedBox(
+                height: 20
+              ),
               Text('REGISTER',style: TextStyle(
                 fontSize: 30,fontWeight: FontWeight.bold,color: Colors.green.shade800),
               ),SizedBox(
@@ -101,7 +106,11 @@ class _MyphoneState extends State<Myphone> {
               SizedBox(
                 height: 45,
                 width: double.infinity,
-                child: ElevatedButton(onPressed: () {}, child: Text('Get OTP'),style:ElevatedButton.styleFrom(primary: Colors.green.shade600,shape: RoundedRectangleBorder(
+                child: ElevatedButton(onPressed: () {Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => MyOtp(),
+                        ));}, child: Text('Get OTP'),style:ElevatedButton.styleFrom(backgroundColor: Colors.green.shade600,shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)
                 )
                 ) ,
